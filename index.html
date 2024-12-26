@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mortgage Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="mortgage-calculator-container">
+    <div class="calculator-column">
+      <h2>Mortgage Calculator</h2>
+      <form id="mortgage-form">
+        <label for="amount">Mortgage Amount (AED):</label>
+        <input type="number" id="amount" value="500000">
+        <label for="years">Term in Years:</label>
+        <input type="number" id="years" value="30">
+        <label for="rate">Interest Rate (%):</label>
+        <input type="number" step="0.01" id="rate" value="4.00">
+        <label for="taxes">Taxes/Year (AED):</label>
+        <input type="number" id="taxes" value="5000">
+        <label for="insurance">Insurance/Year (AED):</label>
+        <input type="number" id="insurance" value="1000">
+        <button type="button" id="calculate">Calculate</button>
+      </form>
+    </div>
+
+    <div class="results-column" id="results">
+      <h3>Monthly Payment</h3>
+      <p id="monthly-payment">--</p>
+      <h3>Payment Breakdown</h3>
+      <ul>
+        <li>Principal & Interest: <span id="principal-interest">AED--</span></li>
+        <li>Taxes: <span id="taxes-payment">AED--</span></li>
+        <li>Insurance: <span id="insurance-payment">AED--</span></li>
+      </ul>
+      <h3>Total Cost</h3>
+      <ul>
+        <li>Total Principal: <span id="total-principal">AED--</span></li>
+        <li>Total Interest: <span id="total-interest">AED--</span></li>
+        <li>Total Cost: <span id="total-cost">AED--</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
